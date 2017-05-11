@@ -53,5 +53,34 @@ public class Solution {
 		}
 		return new String(str);
 	}
-
+	public boolean canWinNim(int n) {
+        return n%4!=0;
+    }
+	public int findMaxConsecutiveOnes(int[] nums)
+	{
+		int n=0,n1=0;
+		for(int x=0;x<nums.length;x++)
+		{
+			if(nums[x]==1)
+			{
+				n1++;
+			}
+			else if(nums[x]==0)
+			{
+				if(n1>n)
+				{
+					n=n1;
+					n1=0;
+				}
+				else n1=0;
+			}
+		}
+		return n>n1?n:n1;
+	}
+	public int singleNumber(int[] nums) {
+	            int num=nums[0];
+	        for(int x=1;x<nums.length;x++)
+	            num=num^nums[x];
+	            return num;
+	}
 }
