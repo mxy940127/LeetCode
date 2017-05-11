@@ -1,4 +1,12 @@
+package cn.jygenius;
+
 public class Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
 	public int[] twoSum(int[] nums, int target) {
 		int[] result = new int[2];
 		for (int x = 0; x < nums.length - 1; x++)
@@ -12,4 +20,5 @@ public class Solution {
 			}
 		return result;
 	}
+
 }
