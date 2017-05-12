@@ -100,4 +100,23 @@ public class Solution {
 		}
 		return result;
 	}
+		public boolean canConstruct(String ransomNote, String magazine) {
+			ArrayList<Character> al = new ArrayList<Character>();
+			char[] a = ransomNote.toCharArray();
+			char[] b = magazine.toCharArray();
+			if (a.length > b.length || (a.length == b.length && !ransomNote.equals(magazine)))
+				return false;
+			else {
+				for (int i = 0; i < b.length; i++) {
+					al.add((Character) b[i]);
+				}
+				for (int y = 0; y < a.length; y++) {
+					if (al.contains((Character) a[y])) {
+						al.remove((Character) a[y]);
+					} else
+						return false;
+				}
+				return true;
+			}
+		}
 }
