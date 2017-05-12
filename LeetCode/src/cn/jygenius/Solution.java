@@ -1,7 +1,9 @@
 package cn.jygenius;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeSet;
 
 public class Solution {
@@ -192,7 +194,18 @@ public class Solution {
             int z = (Integer)ts.pollLast();
             int v = (Integer)ts.pollLast();
             return v;
-        }
-        
+        }  
+    }
+	public boolean wordPattern(String pattern, String str) {
+        String[] test = str.split(" ");
+        if(test.length!=pattern.length())
+			return false;
+		Map index = new HashMap();
+		for(Integer i=0;i<test.length;i++)
+		{
+			if(index.put(pattern.charAt(i),i)!=index.put(test[i], i))
+				return false;
+		}
+		return true;
     }
 }
