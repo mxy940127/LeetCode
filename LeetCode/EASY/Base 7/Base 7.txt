@@ -1,0 +1,15 @@
+Given an integer, return its base 7 string representation.
+
+Example 1:
+
+Input: 100
+Output: "202"
+
+Example 2:
+
+Input: -7
+Output: "-10"
+
+
+toString(int i, int radix)
+          返回用第二个参数指定基数表示的第一个参数的字符串表示形式
